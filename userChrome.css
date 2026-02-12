@@ -3,15 +3,16 @@
 	--tab-inactive-bg-color: #333;
 	--tab-active-fg-fallback-color: #eee;		/* color of text in an active tab without a container */
 	--tab-inactive-fg-fallback-color: #888;		/* color of text in an inactive tab without a container */
-	--urlbar-focused-bg-color: #41404c;
-	--urlbar-not-focused-bg-color: #1c1b22;
-	--toolbar-bgcolor: #2b2a33 !important;
-	--tab-font: 'DejaVu Sans Mono';
-	--urlbar-font: 'DejaVu Sans Mono';
+	--urlbar-focused-bg-color: #fff;
+	--urlbar-not-focused-bg-color: #fff;
+    --sidebar-bg-color: #222;
+	--toolbar-bgcolor: #fff !important;
+	--tab-font: 'BlexMono Nerd Font';
+	--urlbar-font: 'BlexMono Nerd Font';
 
 	/* try increasing if you encounter problems */
-	--urlbar-height-setting: 22px;
-	--tab-min-height: 16px !important;
+	--urlbar-height-setting: 20px;
+	--tab-min-height: 18px !important;
 
 	/* I don't recommend you touch this unless you know what you're doing */
 	--arrowpanel-menuitem-padding: 2px !important;
@@ -72,7 +73,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
 	font-family: var(--urlbar-font, 'monospace');
-	font-size: 11px;
+	font-size: 18px;
 }
 
 #urlbar {
@@ -175,7 +176,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
 #TabsToolbar, .tabbrowser-tab {
 	max-height: var(--tab-min-height) !important;
-	font-size: 11px !important;
+	font-size: 18px !important;
 }
 
 /* Change color of normal tabs */
@@ -211,7 +212,7 @@ tab {
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button { display: none !important; }
 
 /* disable favicons in tab */
-/* .tab-icon-stack:not([pinned]) { display: none !important; } */
+/*.tab-icon-stack:not([pinned]) { display: none !important; }*/
 
 .tabbrowser-tab {
 	/* remove border between tabs */
@@ -315,11 +316,19 @@ tab {
 }
 
 #navigator-toolbox,
+#sidebar,
 #sidebar-box,
 #sidebar-main,
 #sidebar-splitter,
+#sidebar-header,
 #tabbrowser-tabbox {
 	z-index: auto !important;
+    background: var(--sidebar-bg-color) !important;
+}
+
+.browser-sidebar,
+#sidebar-splitter {
+  background: #1e1e1e !important;
 }
 
 /* Show when toolbox is focused, like when urlbar has received focus */
@@ -373,6 +382,41 @@ tab {
 	margin-top: var(--uc-navbar-transform);
 }
 
-:root[inFullscreen] > body > #browser {
-	margin-top: 0 !important;
+/* numbering tabs */
+#tabbrowser-tabs {
+  counter-reset: tab-counter;
 }
+
+.tabbrowser-tab {
+  counter-increment: tab-counter;
+}
+
+.tabbrowser-tab .tab-content::before {
+  content: counter(tab-counter);
+  position: absolute;
+  left: 0px;       
+
+  padding: 0 0px;
+  border-radius: 6px;
+
+  color: #ffffff;     
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+
+  opacity: 0.9;
+  pointer-events: none; 
+  z-index: 9999;
+}
+
+/*
+.tabbrowser-tab[pinned] .tab-content::before {
+  display: none !important;
+}
+*/
+
+.tabbrowser-tab:not(:first-child) {
+  border-left: 1px solid #0002 !important;
+}
+
