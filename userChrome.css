@@ -413,3 +413,22 @@ tab {
   font-size: 14px;
   line-height: 1;
 }
+
+/* Remove extra bottom spacing from tab groups */
+#TabsToolbar {
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Remove extra height added by group container */
+#tabbrowser-tabs {
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/* Prevent tab strip from growing taller */
+#TabsToolbar,
+#tabbrowser-tabs {
+  min-height: unset !important;
+  height: var(--tab-min-height) !important;
+}
