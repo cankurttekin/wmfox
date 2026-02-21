@@ -2,13 +2,20 @@
 
 This particular config works best with a minimalist WM like sway/i3, dwm, xmonad or
 awesome.
+
 This fork:
+
 Moves tabs and url bar bottom. I prefer the main content to be at 
 top of screen for more distraction free, cleaner look and ergonomic setup.
 
 It also adds numbering on tabs so you can either use Alt+number or if you use 
 vimium plugins number+g0 for switching to the tab you wish to go 
 without guessing, cycling in ctrl+tab or even worse using mouse.
+
+## Screenshots
+
+![](./screenshots/screenshot.png)
+
 
 ## How to use
 
@@ -37,16 +44,7 @@ Color of text in a tab is determined by its container. If a tab has no
 container, fallback colors are used. You can change the basic colorscheme by
 adjusting values of variables defined at the top of `userChrome.css`.
 
-## Screenshots
-
-![](./screenshots/screenshot.png)
-
-
 ## Common issues
-
-### black stripe under tab bar
-
-Increase the value of the `--tab-min-height` variable in `userChrome.css`.
 
 ### I want to disable favicons
 
