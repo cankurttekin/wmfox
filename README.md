@@ -1,9 +1,6 @@
 # A minimalist userChrome.css
 
-`userChrome.css` is a Firefox configuration file which allows the user to
-define his own look of the browser.
-
-This particular config works best with a minimalist WM like dwm, xmonad or
+This particular config works best with a minimalist WM like sway/i3, dwm, xmonad or
 awesome.
 
 ## How to use
@@ -19,8 +16,6 @@ Enable compact mode:
 
 Via the customize toolbar menu remove firefox view (the top-left corner icon)
 
-Enable dark theme in settings.
-
 Copy `userChrome.css` to the `chrome` directory in your firefox profile. If
 there is no such directory create it.
 
@@ -30,9 +25,6 @@ by going to `about:profiles`.
 Then either install the DejaVu Sans Mono font, or change the relevant line of
 `userChrome.css` (search for 'DejaVu Sans Mono') to some other font that you have
 installed. This affects the urlbar font.
-
-Optionally install [tridactyl](https://github.com/tridactyl/tridactyl) or a
-similar extension for best results.
 
 Color of text in a tab is determined by its container. If a tab has no
 container, fallback colors are used. You can change the basic colorscheme by
@@ -58,5 +50,6 @@ Search for 'disable favicons' and uncomment the relevant line.
 
 ## Credit
 
-This userchrome is a fork of
-[aadilayub's](https://github.com/aadilayub/firefox-i3wm-theme).
+[Dook97's firefox-qutebrowser-userchrome](https://github.com/Dook97/firefox-qutebrowser-userchrome)
+
+[aadilayub's firefox-i3wm-theme](https://github.com/aadilayub/firefox-i3wm-theme)
