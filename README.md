@@ -2,6 +2,13 @@
 
 This particular config works best with a minimalist WM like sway/i3, dwm, xmonad or
 awesome.
+This fork:
+Moves tabs and url bar bottom. I prefer the main content to be at 
+top of screen for more distraction free, cleaner look and ergonomic setup.
+
+It also adds numbering on tabs so you can either use Alt+number or if you use 
+vimium plugins number+g0 for switching to the tab you wish to go 
+without guessing, cycling in ctrl+tab or even worse using mouse.
 
 ## How to use
 
@@ -32,11 +39,8 @@ adjusting values of variables defined at the top of `userChrome.css`.
 
 ## Screenshots
 
-![](https://raw.githubusercontent.com/Dook97/firefox-qutebrowser-userchrome/screenshots/basic.png)
+![](./screenshots/screenshot.png)
 
-With navbar shown:
-
-![](https://github.com/Dook97/firefox-qutebrowser-userchrome/blob/screenshots/urlbar.png)
 
 ## Common issues
 
