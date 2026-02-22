@@ -380,7 +380,7 @@ tab {
 */
 
 #browser {
-  margin-bottom: calc(var(--tab-min-height) + 2px) !important;
+  margin-bottom: calc(var(--tab-min-height) + 0px) !important;
 }
 
 /* increase pinned tab width */
