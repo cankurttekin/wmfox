@@ -3,10 +3,10 @@
 	--tab-inactive-bg-color: #000;
 	--tab-active-fg-fallback-color: #eee;		/* color of text in an active tab without a container */
 	--tab-inactive-fg-fallback-color: #888;		/* color of text in an inactive tab without a container */
-	--urlbar-focused-bg-color: #fff;
-	--urlbar-not-focused-bg-color: #fff;
+	--urlbar-focused-bg-color: #eee;
+	--urlbar-not-focused-bg-color: #eee;
     --sidebar-bg-color: #222;
-	--toolbar-bgcolor: #fff !important;
+	--toolbar-bgcolor: #222 !important;
 	--tab-font: 'BlexMono Nerd Font';
 	--urlbar-font: 'BlexMono Nerd Font';
 
@@ -281,7 +281,6 @@ tab {
 	--uc-navbar-transform: calc(0px - var(--urlbar-height-setting));
 }
 
-
 :root[sessionrestored] :where(
 	#nav-bar,
 	#PersonalToolbar,
@@ -456,10 +455,10 @@ tab {
 
 /* urlbar open upward */
 #urlbar[open] > .urlbarView {
-background-color: var(--urlbar-focused-bg-color) !important;
-border: 1px solid rgba(0,0,0,0.2) !important;
-box-shadow: 0 -6px 16px rgba(0,0,0,0.25) !important;
-backdrop-filter: none !important;
+  background-color: var(--urlbar-focused-bg-color) !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+  box-shadow: 0 -6px 16px rgba(0,0,0,0.25) !important;
+  backdrop-filter: none !important;
   position: absolute !important;
   bottom: 100% !important;
   top: auto !important;
