@@ -1,8 +1,9 @@
 :root {
-	--tab-active-bg-color: #285577;
-	--tab-inactive-bg-color: #000;
-	--tab-active-fg-fallback-color: #eee;		/* color of text in an active tab without a container */
-	--tab-inactive-fg-fallback-color: #888;		/* color of text in an inactive tab without a container */
+	--tab-active-bg-color: #2a283e;
+	--tab-inactive-bg-color: #908caa;
+	--tab-active-fg-fallback-color: #e0def4;		/* color of text in an active tab without a container */
+	--tab-inactive-fg-fallback-color: #393552;		/* color of text in an inactive tab without a container */
+    --tab-hover-bg-color: #393552;
 	--urlbar-focused-bg-color: #eee;
 	--urlbar-not-focused-bg-color: #eee;
     --sidebar-bg-color: #222;
@@ -80,7 +81,6 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	--urlbar-height: var(--urlbar-height-setting) !important;
 	--urlbar-toolbar-height: var(--urlbar-height-setting) !important;
 	min-height: var(--urlbar-height-setting) !important;
-	border-color: var(--lwt-toolbar-field-border-color, hsla(240,5%,5%,.25)) !important;
 }
 
 #urlbar-input {
@@ -231,7 +231,7 @@ tab {
 
 /* Tab: hovered colors */
 #tabbrowser-tabs .tabbrowser-tab:hover:not([selected]) .tab-content {
-	background: var(--tab-active-bg-color) !important;
+	background: var(--tab-hover-bg-color) !important;
 }
 
 /* hide window controls */
@@ -408,7 +408,7 @@ tab {
   padding: 2px;
 
   color: #000;
-  background-color: #FFF481;
+  background-color: #f6c177;
 
   font-weight: 800;
   font-size: 14px;
@@ -456,11 +456,10 @@ tab {
 /* urlbar open upward */
 #urlbar[open] > .urlbarView {
   background-color: var(--urlbar-focused-bg-color) !important;
-  border: 1px solid rgba(0,0,0,0.2) !important;
-  box-shadow: 0 -6px 16px rgba(0,0,0,0.25) !important;
+  /*border: 1px solid #000 !important;*/
   backdrop-filter: none !important;
   position: absolute !important;
   bottom: 100% !important;
   top: auto !important;
-  margin-bottom: 4px !important;
+  /*margin-bottom: 2px !important;*/
 }
