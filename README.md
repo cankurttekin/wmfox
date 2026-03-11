@@ -1,57 +1,48 @@
-# A minimalist userChrome.css
+# wmfox: Minimalist Keyboard-Oriented Firefox Theme
 
-This particular config works best with a minimalist WM like sway/i3, dwm, xmonad or
-awesome.
+wmfox is a custom Firefox theme designed for keyboard-driven, minimalist window manager setups (sway/i3, dwm, xmonad, etc).
+This is heavily opinionated and customized for my personal workflow and likings(like fonts, rose-pine colors etc.), check out the Dook97's repo if you want more streamlined solution.
 
-This fork:
+## Features
 
-Moves tabs and url bar bottom. I prefer the main content to be at 
-top of screen for more distraction free, cleaner look and ergonomic setup.
-
-It also adds numbering on tabs so you can either use Alt+number or if you use 
-vimium plugins number+g0 for switching to the tab you wish to go 
-without guessing, cycling in ctrl+tab or even worse using mouse.
+- **Tabs & URL Bar at the Bottom:** Keeps main content at eye level for a cleaner, distraction-free, ergonomic experience.
+- **Numbered Tabs:** Easily switch tabs using `Alt+number` or Vimium's `number+g0`—no guessing, cycling with `Ctrl+Tab`, or reaching for the mouse.
+- **Minimal UI:** Optimized for compact mode and removes unnecessary elements for a focused browsing environment.
 
 ## Screenshots
 
-![](./screenshots/screenshot.png)
+![Screenshot](./screenshots/screenshot.png)
 
+## Installation
 
-## How to use
+1. **Enable User Chrome:**
+   - Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
 
-Enable user chrome:
+2. **Enable Compact Mode:**
+   - In `about:config`, set `browser.compactmode.show` to `true`.
+   - In the Customize Toolbar menu, set `Density` to `Compact`.
 
-1) in `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
+3. **Remove Firefox View:**
+   - Use the Customize Toolbar menu to remove the Firefox View icon (top-left corner).
 
-Enable compact mode:
+4. **Install the Theme:**
+   - Copy `userChrome.css` to the `chrome` directory in your Firefox profile. Create the directory if it doesn't exist.
+   - Find your profile directory via `about:profiles`.
 
-1) in `about:config` set `browser.compactmode.show` to `true`
-2) in the customize toolbar menu set `density` to `compact`
+5. **Font Configuration:**
+   - Install the Blex Mono Nerd Font(doesnt use any icons you could just use regular IBM Blex Mono too), or edit `userChrome.css` (search for 'BlexMono') to use another installed font.
 
-Via the customize toolbar menu remove firefox view (the top-left corner icon)
+6. **Customize Colors:**
+   - Tab text color is determined by its container. Fallback colors are used for non-container tabs.
+   - Adjust the color scheme by editing variables at the top of `userChrome.css`.
 
-Copy `userChrome.css` to the `chrome` directory in your firefox profile. If
-there is no such directory create it.
+## Further Customizations
 
-If you're unsure what the path to your profile's directory is, you can find out
-by going to `about:profiles`.
+### Disabling Favicons
 
-Then either install the DejaVu Sans Mono font, or change the relevant line of
-`userChrome.css` (search for 'DejaVu Sans Mono') to some other font that you have
-installed. This affects the urlbar font.
+- Search for 'disable favicons' in `userChrome.css` and uncomment the relevant line.
 
-Color of text in a tab is determined by its container. If a tab has no
-container, fallback colors are used. You can change the basic colorscheme by
-adjusting values of variables defined at the top of `userChrome.css`.
+## Credits
 
-## Common issues
-
-### I want to disable favicons
-
-Search for 'disable favicons' and uncomment the relevant line.
-
-## Credit
-
-[Dook97's firefox-qutebrowser-userchrome](https://github.com/Dook97/firefox-qutebrowser-userchrome)
-
-[aadilayub's firefox-i3wm-theme](https://github.com/aadilayub/firefox-i3wm-theme)
+- [Dook97's firefox-qutebrowser-userchrome](https://github.com/Dook97/firefox-qutebrowser-userchrome)
+- [aadilayub's firefox-i3wm-theme](https://github.com/aadilayub/firefox-i3wm-theme)
