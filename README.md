@@ -30,7 +30,7 @@ This is heavily opinionated and customized for my personal workflow and likings(
    - Find your profile directory via `about:profiles`.
 
 5. **Font Configuration:**
-   - Install the Blex Mono Nerd Font(doesnt use any icons you could just use regular IBM Blex Mono too), or edit `userChrome.css` (search for 'BlexMono') to use another installed font.
+   - Install the IBM Plex Mono, or edit `userChrome.css` (search for 'IBM') to use another installed font.
 
 6. **Customize Colors:**
    - Tab text color is determined by its container. Fallback colors are used for non-container tabs.
