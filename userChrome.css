@@ -276,10 +276,32 @@ tab {
 	display: none;
 }
 
+/* numbering tabs */
+#tabbrowser-tabs { counter-reset: tab-counter; }
+.tabbrowser-tab { counter-increment: tab-counter; }
+.tabbrowser-tab .tab-content {
+	padding-left: 0 !important;
+}
+.tabbrowser-tab .tab-content::before {
+	content: counter(tab-counter);
+	margin-right: 0.5em;
+	padding: var(--tab-min-height) 0.4em;
+	color: #222;
+	background-color: #f6c177;
+}
+
+:root[inFullscreen] > body > #browser {
+	margin: 0 !important;
+}
+
 /* --- AUTOHIDE NAVBAR ---------------------------------- */
 
 :root {
 	--uc-navbar-transform: calc(0px - var(--urlbar-height-setting));
+}
+
+#navigator-toolbox > div {
+	display: contents;
 }
 
 :root[sessionrestored] :where(
@@ -428,8 +450,8 @@ tab {
   bottom: 0 !important;
   left: 0 !important;
   right: 0 !important;
-  /*z-index: 1000 !important;*/
-  background: #000 !important;
+  z-index: 1000 !important;
+  background: transparent !important;
 }
 
 /* Inside toolbox: URL bar above tabs */
