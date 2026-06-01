@@ -12,7 +12,7 @@
 	--urlbar-font: 'IBM Plex Mono';
 
 	/* try increasing if you encounter problems */
-	--urlbar-height-setting: 20px;
+	--urlbar-height-setting: 22px;
 	--tab-min-height: 18px !important;
 
 	/* I don't recommend you touch this unless you know what you're doing */
@@ -81,6 +81,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	--urlbar-height: var(--urlbar-height-setting) !important;
 	--urlbar-toolbar-height: var(--urlbar-height-setting) !important;
 	min-height: var(--urlbar-height-setting) !important;
+	border-color: var(--lwt-toolbar-field-border-color, hsla(240,5%,5%,.25)) !important;
 }
 
 #urlbar-input {
@@ -375,7 +376,10 @@ tab {
 	#ask-chat-shortcuts,
 	#selection-shortcut-action-panel,
 	#chat-shortcuts-options-panel,
-	#tab-preview-panel
+	#tab-preview-panel,
+	#contentAreaContextMenu,
+	#autocompletePopup,
+	#PopupAutoComplete
 )) ~ toolbox #urlbar[popover],
 .browser-titlebar:is(:hover, :focus-within) ~ #nav-bar #urlbar[popover],
 #nav-bar:is(:hover, :focus-within) #urlbar[popover],
@@ -390,7 +394,10 @@ tab {
 	#ask-chat-shortcuts,
 	#selection-shortcut-action-panel,
 	#chat-shortcuts-options-panel,
-	#tab-preview-panel
+	#tab-preview-panel,
+	#contentAreaContextMenu,
+	#autocompletePopup,
+	#PopupAutoComplete
 )) ~ #navigator-toolbox > .browser-toolbar {
 	transform: translateY(0);
 	opacity: 1;
@@ -470,4 +477,11 @@ tab {
   position: absolute !important;
   bottom: 100% !important;
   top: auto !important;
+}
+
+/* ensure context menus and autocomplete stay above the fixed toolbar */
+#contentAreaContextMenu,
+#autocompletePopup,
+#PopupAutoComplete {
+  z-index: 1001 !important;
 }
