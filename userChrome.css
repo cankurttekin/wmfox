@@ -1,13 +1,73 @@
 :root {
-	--tab-active-bg-color: #2a283e;
+	/* =============================================
+	   COLOR SCHEME
+	   Uncomment ONE set of variables below,
+	   comment out the rest. Add your own at the end.
+	   ============================================= */
+
+	/* --- Rosé Pine (default) --- */
+	/* --tab-active-bg-color: #2a283e;
 	--tab-inactive-bg-color: #908caa;
-	--tab-active-fg-fallback-color: #e0def4;		/* color of text in an active tab without a container */
-	--tab-inactive-fg-fallback-color: #393552;		/* color of text in an inactive tab without a container */
-    --tab-hover-bg-color: #56526e;
+	--tab-active-fg-fallback-color: #e0def4;
+	--tab-inactive-fg-fallback-color: #393552;
+	--tab-hover-bg-color: #56526e;
 	--urlbar-focused-bg-color: #eee;
 	--urlbar-not-focused-bg-color: #eee;
-    --sidebar-bg-color: #222;
+	--sidebar-bg-color: #222;
 	--toolbar-bgcolor: #222 !important;
+	--sidebar-content-bg: #1e1e1e;
+	--tab-number-bg: #f6c177;
+	--tab-number-fg: #000;
+	--urlbar-text-color: #1a1a1a;
+	--toolbar-text-color: #e0def4;
+	--panel-text-color: #e0def4;
+	--urlbar-row-hover-bg: #ddd;
+	--urlbar-row-hover-fg: #000;
+	--menuitem-hover-bg: #ddd;
+	--menuitem-hover-fg: #000; */
+
+    /* --- Monochrome Dark (High Contrast) --- */
+    --tab-active-bg-color: #2f2f2f;
+    --tab-inactive-bg-color: #4f4f4f;
+    --tab-active-fg-fallback-color: #ffffff;
+    --tab-inactive-fg-fallback-color: #bdbdbd;
+    --tab-hover-bg-color: #404040;
+    --urlbar-focused-bg-color: #181818;
+    --urlbar-not-focused-bg-color: #252525;
+    --sidebar-bg-color: #101010;
+    --toolbar-bgcolor: #101010 !important;
+    --sidebar-content-bg: #1a1a1a;
+    --tab-number-bg: #d0d0d0;
+    --tab-number-fg: #101010;
+    --urlbar-text-color: #e0e0e0;
+    --toolbar-text-color: #e0e0e0;
+    --panel-text-color: #e0e0e0;
+    --urlbar-row-hover-bg: #3a3a3a;
+    --urlbar-row-hover-fg: #ffffff;
+    --menuitem-hover-bg: #3a3a3a;
+    --menuitem-hover-fg: #ffffff;
+
+	/* --- Catppuccin Mocha --- */
+	/* --tab-active-bg-color: #313244;
+	--tab-inactive-bg-color: #585b70;
+	--tab-active-fg-fallback-color: #cdd6f4;
+	--tab-inactive-fg-fallback-color: #a6adc8;
+	--tab-hover-bg-color: #45475a;
+	--urlbar-focused-bg-color: #313244;
+	--urlbar-not-focused-bg-color: #313244;
+	--sidebar-bg-color: #1e1e2e;
+	--toolbar-bgcolor: #1e1e2e !important;
+	--sidebar-content-bg: #181825;
+	--tab-number-bg: #f9e2af;
+	--tab-number-fg: #1e1e2e;
+	--urlbar-text-color: #cdd6f4;
+	--toolbar-text-color: #cdd6f4;
+	--panel-text-color: #cdd6f4;
+	--urlbar-row-hover-bg: #45475a;
+	--urlbar-row-hover-fg: #ffffff;
+	--menuitem-hover-bg: #45475a;
+	--menuitem-hover-fg: #ffffff; */
+
 	--tab-font: 'IBM Plex Mono';
 	--urlbar-font: 'IBM Plex Mono';
 
@@ -21,9 +81,13 @@
 	--arrowpanel-menuitem-border-radius: 0px !important;
 	--toolbarbutton-border-radius: 0px !important;
 	--toolbarbutton-inner-padding: 0px 2px !important;
+	--toolbar-field-color: var(--urlbar-text-color) !important;
+	--toolbar-field-focus-color: var(--urlbar-text-color) !important;
 	--toolbar-field-focus-background-color: var(--urlbar-focused-bg-color) !important;
 	--toolbar-field-background-color: var(--urlbar-not-focused-bg-color) !important;
 	--toolbar-field-focus-border-color: transparent !important;
+	--arrowpanel-color: var(--panel-text-color) !important;
+	--arrowpanel-background: var(--sidebar-bg-color) !important;
 }
 
 /* --- GENERAL DEBLOAT ---------------------------------- */
@@ -38,6 +102,17 @@ menu, menuitem, menucaption { border-radius: 0px !important; }
 /* no stupid large buttons in right-click menu */
 menupopup > #context-navigation { display: none !important; }
 menupopup > #context-sep-navigation { display: none !important; }
+
+/* highlighted menu item */
+menu[_moz-menuactive], menuitem[_moz-menuactive],
+menu[_moz-menuactive] *,
+menuitem[_moz-menuactive] *,
+menu[_moz-menuactive="true"] *,
+menuitem[_moz-menuactive="true"] * {
+	background-color: var(--menuitem-hover-bg) !important;
+	color: var(--menuitem-hover-fg) !important;
+	fill: var(--menuitem-hover-fg) !important;
+}
 
 /* --- DEBLOAT NAVBAR ----------------------------------- */
 
@@ -87,14 +162,50 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 #urlbar-input {
 	margin-left: 0.4em !important;
 	margin-right: 0.4em !important;
+	color: var(--urlbar-text-color) !important;
 }
 #urlbar > .urlbar-input-container {
 	padding: 0 !important;
 	border: 0 !important;
 }
 
+.urlbarView-row {
+	color: var(--urlbar-text-color) !important;
+}
+
+#urlbar .urlbarView-row[selected],
+#urlbar .urlbarView-row[selected="true"],
+#urlbar .urlbarView-row[aria-selected="true"],
+#urlbar .urlbarView-row[selected] *,
+#urlbar .urlbarView-row[selected="true"] *,
+#urlbar .urlbarView-row[aria-selected="true"] * {
+	background-color: var(--urlbar-row-hover-bg) !important;
+	color: var(--urlbar-row-hover-fg) !important;
+	fill: var(--urlbar-row-hover-fg) !important;
+}
+
+/* form autocomplete (input field suggestions) */
+#PopupAutoComplete richlistitem[selected="true"],
+#PopupAutoComplete richlistitem[aria-selected="true"],
+#PopupAutoComplete richlistitem[selected="true"] *,
+#PopupAutoComplete richlistitem[aria-selected="true"] * {
+	background-color: var(--urlbar-row-hover-bg) !important;
+	color: var(--urlbar-row-hover-fg) !important;
+	fill: var(--urlbar-row-hover-fg) !important;
+}
+
 #navigator-toolbox {
 	border: none !important;
+}
+
+/* toolbar text color */
+#nav-bar {
+	color: var(--toolbar-text-color) !important;
+}
+
+/* panel and context menu text color */
+menupopup, panel, .panel-arrowcontent {
+	color: var(--panel-text-color) !important;
 }
 
 /* keep pop-up menus from overlapping with navbar */
@@ -277,20 +388,6 @@ tab {
 	display: none;
 }
 
-/* numbering tabs */
-#tabbrowser-tabs { counter-reset: tab-counter; }
-.tabbrowser-tab { counter-increment: tab-counter; }
-.tabbrowser-tab .tab-content {
-	padding-left: 0 !important;
-}
-.tabbrowser-tab .tab-content::before {
-	content: counter(tab-counter);
-	margin-right: 0.5em;
-	padding: var(--tab-min-height) 0.4em;
-	color: #222;
-	background-color: #f6c177;
-}
-
 :root[inFullscreen] > body > #browser {
 	margin: 0 !important;
 }
@@ -348,7 +445,7 @@ tab {
 
 .browser-sidebar,
 #sidebar-splitter {
-  background: #1e1e1e !important;
+  background: var(--sidebar-content-bg) !important;
 }
 
 /* Show when toolbox is focused, like when urlbar has received focus */
@@ -428,8 +525,8 @@ tab {
 	content: counter(tab-counter);
 	margin-right: 0.4em;
 	padding: var(--tab-min-height) 0.4em;
-	color: #000;
-	background-color: #f6c177;
+	color: var(--tab-number-fg);
+	background-color: var(--tab-number-bg);
 }
 
 /* Remove extra bottom spacing from tab groups */

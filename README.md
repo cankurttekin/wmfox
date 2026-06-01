@@ -34,7 +34,9 @@ This is heavily opinionated and customized for my personal workflow and likings(
 
 6. **Customize Colors:**
    - Tab text color is determined by its container. Fallback colors are used for non-container tabs.
-   - Adjust the color scheme by editing variables at the top of `userChrome.css`.
+   - Choose a color scheme at the top of `userChrome.css` — uncomment one scheme block and comment out the others.
+   - Available presets: **Monochrome** (default), **Rosé Pine**, **Catppuccin Mocha**. 
+   - You can also tweak individual `--*` variables to make your own scheme.
 
 ## Further Customizations
 
