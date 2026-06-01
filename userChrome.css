@@ -5,7 +5,7 @@
 	   comment out the rest. Add your own at the end.
 	   ============================================= */
 
-	/* --- Rosé Pine (default) --- */
+	/* --- Rosé Pine --- */
 	/* --tab-active-bg-color: #2a283e;
 	--tab-inactive-bg-color: #908caa;
 	--tab-active-fg-fallback-color: #e0def4;
@@ -26,7 +26,30 @@
 	--menuitem-hover-bg: #ddd;
 	--menuitem-hover-fg: #000; */
 
-    /* --- Monochrome Dark (High Contrast) --- */
+    /* --- Rosé Pine Dawn --- */
+    /*
+    --tab-active-bg-color: #faf4ed;
+    --tab-inactive-bg-color: #9893a5;
+    --tab-active-fg-fallback-color: #575279;
+    --tab-inactive-fg-fallback-color: #575279;
+    --tab-hover-bg-color: #dfdad9;
+    --urlbar-focused-bg-color: #fffaf3;
+    --urlbar-not-focused-bg-color: #f2e9e1;
+    --sidebar-bg-color: #faf4ed;
+    --toolbar-bgcolor: #faf4ed !important;
+    --sidebar-content-bg: #fffaf3;
+    --tab-number-bg: #ea9d34;
+    --tab-number-fg: #faf4ed;
+    --urlbar-text-color: #575279;
+    --toolbar-text-color: #575279;
+    --panel-text-color: #575279;
+    --urlbar-row-hover-bg: #dfdad9;
+    --urlbar-row-hover-fg: #575279;
+    --menuitem-hover-bg: #dfdad9;
+    --menuitem-hover-fg: #575279;
+    */
+
+    /* --- Monochrome Dark (default) --- */
     --tab-active-bg-color: #2f2f2f;
     --tab-inactive-bg-color: #4f4f4f;
     --tab-active-fg-fallback-color: #ffffff;
