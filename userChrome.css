@@ -6,7 +6,7 @@
 	   ============================================= */
 
 	/* --- Rosé Pine --- */
-	/* --tab-active-bg-color: #2a283e;
+	--tab-active-bg-color: #2a283e;
 	--tab-inactive-bg-color: #908caa;
 	--tab-active-fg-fallback-color: #e0def4;
 	--tab-inactive-fg-fallback-color: #393552;
@@ -16,7 +16,7 @@
 	--sidebar-bg-color: #222;
 	--toolbar-bgcolor: #222 !important;
 	--sidebar-content-bg: #1e1e1e;
-	--tab-number-bg: #f6c177;
+	--tab-number-bg: #C4A7E7;
 	--tab-number-fg: #000;
 	--urlbar-text-color: #1a1a1a;
 	--toolbar-text-color: #e0def4;
@@ -24,7 +24,7 @@
 	--urlbar-row-hover-bg: #ddd;
 	--urlbar-row-hover-fg: #000;
 	--menuitem-hover-bg: #ddd;
-	--menuitem-hover-fg: #000; */
+	--menuitem-hover-fg: #000;
 
     /* --- Rosé Pine Dawn --- */
     /*
@@ -50,6 +50,7 @@
     */
 
     /* --- Monochrome Dark (default) --- */
+    /*
     --tab-active-bg-color: #2f2f2f;
     --tab-inactive-bg-color: #4f4f4f;
     --tab-active-fg-fallback-color: #ffffff;
@@ -69,9 +70,11 @@
     --urlbar-row-hover-fg: #ffffff;
     --menuitem-hover-bg: #3a3a3a;
     --menuitem-hover-fg: #ffffff;
+    */
 
 	/* --- Catppuccin Mocha --- */
-	/* --tab-active-bg-color: #313244;
+	/* 
+    --tab-active-bg-color: #313244;
 	--tab-inactive-bg-color: #585b70;
 	--tab-active-fg-fallback-color: #cdd6f4;
 	--tab-inactive-fg-fallback-color: #a6adc8;
@@ -89,7 +92,8 @@
 	--urlbar-row-hover-bg: #45475a;
 	--urlbar-row-hover-fg: #ffffff;
 	--menuitem-hover-bg: #45475a;
-	--menuitem-hover-fg: #ffffff; */
+	--menuitem-hover-fg: #ffffff;
+     */
 
 	--tab-font: 'IBM Plex Mono';
 	--urlbar-font: 'IBM Plex Mono';
