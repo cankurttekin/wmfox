@@ -16,7 +16,7 @@
 	--sidebar-bg-color: #222;
 	--toolbar-bgcolor: #222 !important;
 	--sidebar-content-bg: #1e1e1e;
-	--tab-number-bg: #C4A7E7;
+	--tab-number-bg: #f6c177;
 	--tab-number-fg: #000;
 	--urlbar-text-color: #1a1a1a;
 	--toolbar-text-color: #e0def4;
@@ -115,6 +115,11 @@
 	--toolbar-field-focus-border-color: transparent !important;
 	--arrowpanel-color: var(--panel-text-color) !important;
 	--arrowpanel-background: var(--sidebar-bg-color) !important;
+	--chrome-block-radius: 0 !important;
+	--urlbar-border-radius: 0 !important;
+	--panel-box-shadow-margin: 0 !important;
+	--toolbarbutton-padding-inner: 0.3em !important;
+	--urlbarview-border-radius: 0 !important;
 }
 
 /* --- GENERAL DEBLOAT ---------------------------------- */
@@ -182,6 +187,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 #urlbar {
 	--urlbar-height: var(--urlbar-height-setting) !important;
 	--urlbar-toolbar-height: var(--urlbar-height-setting) !important;
+	padding-left: 0.3em !important;
 	min-height: var(--urlbar-height-setting) !important;
 	border-color: var(--lwt-toolbar-field-border-color, hsla(240,5%,5%,.25)) !important;
 }
@@ -601,6 +607,34 @@ tab {
   position: absolute !important;
   bottom: 100% !important;
   top: auto !important;
+}
+
+/* urlbar open upward with nova enabled - firefox version 157 */
+@media -moz-pref("browser.nova.enabled") {
+  #urlbar[popover-open] {
+    --urlbar-background-overhang-open: 0px !important;
+
+    display: flex !important;
+    flex-direction: column-reverse !important;
+
+    top: auto !important;
+    bottom: 0 !important;
+  }
+
+  #urlbar[popover-open] > .urlbarView {
+    position: absolute !important;
+
+    margin-bottom: calc(var(--urlbar-height-setting) + 8px) !important;
+    bottom: 100% !important;
+    top: auto !important;
+
+    width: 100% !important;
+    max-height: 40vh !important;
+
+    background-color: var(--urlbar-focused-bg-color) !important;
+    backdrop-filter: none !important;
+  }
+
 }
 
 /* ensure context menus and autocomplete stay above the fixed toolbar */
