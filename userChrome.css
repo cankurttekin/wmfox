@@ -543,6 +543,10 @@ tab {
   margin-bottom: calc(var(--tab-min-height) + 0px) !important;
 }
 
+.browserContainer {
+  border-top: 0 !important;
+}
+
 /* increase pinned tab width */
 .tabbrowser-tab[pinned] {
   min-width: 58px !important;
